@@ -57,9 +57,11 @@ namespace OpenTKMinecraft.Components
             UpdateModelView();
         }
 
+        public static Random random = new Random();
+
         private void UpdateModelView() =>
             _modelview = Matrix4.CreateScale(Scale.X, Scale.Y, Scale.Z)
-                       * Matrix4.CreateRotationZ(Rotation.X)
+                       * Matrix4.CreateRotationZ((float)(Rotation.X + 0.0 * random.NextDouble()))
                        * Matrix4.CreateRotationY(Rotation.Y)
                        * Matrix4.CreateRotationX(Rotation.Z)
                        * Matrix4.CreateTranslation(Position.X, Position.Y, Position.Z);

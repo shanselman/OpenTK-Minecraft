@@ -361,7 +361,7 @@ namespace OpenTKMinecraft
                 return;
 
             //TODO: Comment this out
-            //Scene.Object.Lights[1].Position = Matrix3.CreateRotationY((float)Time) * new Vector3(0, 2, 4);
+            Scene.Object.Lights[1].Position = Matrix3.CreateRotationY((float)Time) * new Vector3(0, 2, 4);
             Scene.Update(Time, e.Time, (float)Width / Height);
         }
 
